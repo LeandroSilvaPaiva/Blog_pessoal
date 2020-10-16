@@ -50,10 +50,8 @@ public class TemaController {
 	public ResponseEntity<Tema> put (@RequestBody Tema tema){
 		return ResponseEntity.ok(repository.save(tema));
 	}
-	
 	@DeleteMapping("/{id}")
 	public void delete(@PathVariable long id) {
 		repository.deleteById(id);
 	}
-
 }
